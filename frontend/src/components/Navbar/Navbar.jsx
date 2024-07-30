@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import "./Navbar.css";
-import { Shirt, ShoppingBag, ShoppingCart } from "lucide-react";
+import { ShoppingBag, ShoppingCart } from "lucide-react";
 import { useState } from "react";
 
 const Navbar = () => {
@@ -14,20 +14,24 @@ const Navbar = () => {
       </div>
       <ul className="nav-menu">
         <li onClick={() => setMenu("shop")}>
-          Shop
-          {menu === "shop" && <hr />}
+          <Link to="/" className={menu === "shop" ? "active" : ""}>
+            Shop
+          </Link>
         </li>
         <li onClick={() => setMenu("men")}>
-          Men
-          {menu === "men" && <hr />}
+          <Link to="/men" className={menu === "men" ? "active" : ""}>
+            Men
+          </Link>
         </li>
         <li onClick={() => setMenu("women")}>
-          Women
-          {menu === "women" && <hr />}
+          <Link to="/women" className={menu === "women" ? "active" : ""}>
+            Women
+          </Link>
         </li>
         <li onClick={() => setMenu("kids")}>
-          Kids
-          {menu === "kids" && <hr />}
+          <Link to="/kids" className={menu === "kids" ? "active" : ""}>
+            Kids
+          </Link>
         </li>
       </ul>
       <div className="nav-login-cart">
