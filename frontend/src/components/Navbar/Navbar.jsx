@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import "./Navbar.css";
 import { ShoppingBag, ShoppingCart } from "lucide-react";
 import { useState } from "react";
+import Button from "../ui/Button/Button";
 
 const Navbar = () => {
   const [menu, setMenu] = useState("shop");
@@ -35,8 +36,8 @@ const Navbar = () => {
         </li>
       </ul>
       <div className="nav-login-cart">
-        <button>Login</button>
-        <ShoppingCart />
+        <Button arrow>Log in</Button>
+        <ShoppingCart className="nav-cart-icon" />
         <div className="nav-cart-count">0</div>
       </div>
     </div>
